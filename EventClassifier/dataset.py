@@ -1,9 +1,9 @@
 import tensorflow as tf
 from tensorflow import keras
 from glob import glob
+import pathlib
 
-
-DATA_DIR = ""
+DATA_DIR = pathlib.Path(("D:/WIDER_v0.1/images/"))
 
 ## Define Configs
 BATCH_SIZE = 32
@@ -28,7 +28,7 @@ def return_dataset():
         batch_size=BATCH_SIZE
     )
 
-    print(f"Founded Classes...: {val_ds.class_names}")
+    print(f"👀 Founded Classes...\n{val_ds.class_names}\n\n")
 
     BURFFER = tf.data.AUTOTUNE
 
