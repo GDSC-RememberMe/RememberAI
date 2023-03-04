@@ -67,3 +67,7 @@ USED 데이터셋이 깔끔한 편임에도 불구하고 사실상 거의 찍는
     - space상에 표현된 것들의 거리를 다 잼→ 유클리안 or 코사인 (뭐가 더 좋은지는 실험으로 알아보자)
     - 즉, 위의 과정을 한 마디로 요약하면, 기존의 Event들 중 가장 유사한 걸 찾아주는 방식
     - 한번 해보자고,..,,!!
+
+# 최종 전략
+- 추억이 없는 경우 -> Image Captioning 후 Tokenizer(Eng Tokenizer) -> Bert Embedding (SBERT, HuggingFace) -> Vectorized words Clustering
+- 추억이 있는 경우 -> Just Tokenizer -> Bert Embedding -> Vectorized words Clustering
