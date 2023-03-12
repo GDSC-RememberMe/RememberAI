@@ -24,4 +24,3 @@ class TFBertRegressor(tf.keras.Model):
 
         return logits
 
-
