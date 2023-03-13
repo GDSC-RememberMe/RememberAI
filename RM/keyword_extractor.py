@@ -6,7 +6,7 @@ from konlpy.tag import Mecab
 def tokenizer(sentence):
     mecab = Mecab(dicpath=r"C:\mecab\mecab-ko-dic")
     pos_lst = ["NNG", "NNP"]
-    filtered_lst = list(set([word for word, pos in mecab.pos(sentence) if pos in pos_lst]))
+    filtered_lst = [word for word, pos in mecab.pos(sentence) if pos in pos_lst]
 
     return filtered_lst
 
@@ -20,7 +20,7 @@ def keyword(doc):
 
     fin_keywords = tokenizer(candidates_lst)
 
-    return fin_keywords
+    return fin_keywords[0]
 
 if __name__ == "__main__":
     example1 = "강릉여행. 온 가족이 함께 강릉으로 여행을 갔다. 다같이 가서 회도 먹고 물놀이도 하고 너무 즐거웠다"
