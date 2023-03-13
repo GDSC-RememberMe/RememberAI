@@ -7,7 +7,7 @@ app = FastAPI()
 
 class InputText(BaseModel):
     text: str
-print("test")
+
 @app.post("/keyword")
 async def keywords(text: InputText):
     input_txt = text.dict()
