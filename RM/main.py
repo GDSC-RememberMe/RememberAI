@@ -1,5 +1,5 @@
-from fastapi import FastAPI, HTTPException
-from keyword_extractor import *
+from fastapi import FastAPI 
+from doc_cluster import * 
 from pydantic import BaseModel
 
 app = FastAPI()
@@ -7,18 +7,17 @@ app = FastAPI()
 class InputText(BaseModel):
     contents: str
 
+CAT_LIST = ["결혼", "물놀이", "졸업", "명절", "일상", "요리", "운동", "등산", "생일", "식사"]
 
 @app.post("/keyword/")
 async def keywords(text: InputText):
     input_txt = text.dict()
     
-    result = keyword(doc=input_txt['contents'])
+    category, keyword = get_cat_key(sentence=input_txt['contents'],
+                                    cat_lst=cat_lst)
 
-    data = {"keyword" : result}
-
+    data = {
+        "category" : category,
+        "keyword" : keyword
+        }
     return data
-
-# @app.exception_handler(Exception)
-# async def exception_handler(request, exc):
-#     print(repr(exc)) # 예외 객체 출력
-#     return {"detail": "Internal server error"} # 클라이언트에 반환할 메시지
