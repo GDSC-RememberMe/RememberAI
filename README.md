@@ -4,8 +4,34 @@
 <br>
 
 ## Using 🤗 and Fast API
+**Tokenizer**  
+- Mecab  
+  
+**Embedding Model**
+- SentenceTransformer
+- `jhgan/ko-sroberta-multitask`
+  
+**Keyword Extractor**
+- [KeyBert](https://github.com/MaartenGr/KeyBERT)
+  
+**Deploy**
+- FastAPI
+  
+**Project Pipeline**
+![image](https://user-images.githubusercontent.com/83996346/226177108-65344730-dd8d-4ce6-bf4d-afe9ae1a9b96.png)  
+If you want to See our _User Flow Chart_, click [Here](https://www.figma.com/file/cc5XGoWgdD4IaN3fyC1VmT/Remember-Me---User-Flow?node-id=0-1&t=F74XOkv06SapTPf3-0)!
 
 
+<br>
+
+## Main Strategy
+1. Users need to input their memories in diary format when saving their memories.
+2. The input memory text is embedded using Sentence-Transformer.
+3. Similarity is measured by comparing the embedded memory text with predefined categories and cosine similarity.
+4. Keywords related to the categories are extracted from the memory text, considering the categories.
+5. The information(dictionary) is then sent to the internal Spring Boot server via FastAPI.
+
+<br>
 
 <details>
     <summary>Develop Diary</summary>
@@ -77,3 +103,10 @@ USED 데이터셋이 깔끔한 편임에도 불구하고 사실상 거의 찍는
 </p>
 </details>
 
+<br>
+
+## How to Use this
+First of all, you have to change dir to where `requirements.txt` is exist.
+```
+pip install requirements.txt
+```
