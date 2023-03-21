@@ -14,7 +14,7 @@ async def keywords(text: InputText):
     input_txt = text.dict()
     
     category, keyword = get_cat_key(sentence=input_txt['contents'],
-                                    cat_lst=cat_lst)
+                                    cat_lst=CAT_LIST)
 
     data = {
         "category" : category,
