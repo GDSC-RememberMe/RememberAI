@@ -1,5 +1,6 @@
 # RememberAI 👴👨‍🦳👨‍🦰👱‍♂️🧑👦👶
-## Memory Clustering and Extract Keywords
+### Memory Clustering and Extract Keywords
+The AI of RememberME automatically categorizes precious memories with your family and helps facilitate smoother recollection of those memories.  
 
 <br>
 
@@ -121,4 +122,5 @@ USED 데이터셋이 깔끔한 편임에도 불구하고 사실상 거의 찍는
 
 ![Untitled (1)](https://user-images.githubusercontent.com/83996346/229000387-d5ca2150-2451-4d6a-9e15-3c3a662603e6.png)
 
-Til now, the RememberAI is only fitted in Korean. Soon, we will update the model to gather English Events even without Event Description!
+Til now, the RememberAI is only fitted in Korean. Soon, we will update the model to gather English Events even without Event Description! 
+Soon, the Q&A based on memories wil be meet you!
