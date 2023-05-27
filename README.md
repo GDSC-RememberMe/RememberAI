@@ -106,7 +106,19 @@ USED 데이터셋이 깔끔한 편임에도 불구하고 사실상 거의 찍는
 <br>
 
 ## How to Use this
-First of all, you have to change dir to where `requirements.txt` is exist.
+```markdown
++---RememberAI
+    ---doc_cluster.py
+    ---main.py
+    ---requirements.txt
 ```
-pip install requirements.txt
-```
+
+1. `git clone https://github.com/GDSC-RememberMe/Remember-Me.git`
+2. `cd RememberAI`
+3. `pip install -r requirements.txt`
+4. ❗ Before you run each code, you have to install `Mecab` at your local. See [Here!](https://konlpy.org/ko/v0.4.0/install/)
+5. if you run `doc_cluster.py`, you can see the model’s clustering and extracting keyword like below!
+
+![Untitled (1)](https://user-images.githubusercontent.com/83996346/229000387-d5ca2150-2451-4d6a-9e15-3c3a662603e6.png)
+
+Til now, the RememberAI is only fitted in Korean. Soon, we will update the model to gather English Events even without Event Description!
